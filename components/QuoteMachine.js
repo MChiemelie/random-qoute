@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 
 async function getData(setQuote, setAuthor, setColorIndex) {
-   const apiUrl = process.env.API_URL
-   const apiKey = process.env.API_KEY
+   const apiUrl = process.env.NEXT_PUBLIC_API_URL
+   const apiKey = process.env.NEXT_PUBLIC_API_KEY
 
    const colors = [
       "#16a085",
@@ -72,7 +72,6 @@ export default function QuoteMachine() {
 
    useEffect(() => {
       getData(setQuote, setAuthor, setColorIndex);
-      console.log("effect ran");
    }, []);
 
    return (
